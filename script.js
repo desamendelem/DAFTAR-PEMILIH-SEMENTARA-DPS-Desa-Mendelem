@@ -24,7 +24,7 @@ function escapeHtml(value) {
 
 function field(label, value) {
   return `
-    <div class="result-item">
+    <div class="result-item${label === "TPS" ? " result-item-tps" : ""}">
       <span class="result-label">${escapeHtml(label)}</span>
       <span class="result-value">${escapeHtml(value || "-")}</span>
     </div>
